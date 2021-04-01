@@ -46,9 +46,9 @@ install:
   - pip3 install gil
   - gil update
   # ehco path
-  - $env:path -Split ";"
-  - $env:include -Split ";"
-  - $env:lib -Split ";"
+  - ps: $env:path -Split ";"
+  - ps: $env:include -Split ";"
+  - ps: $env:lib -Split ";"
 # Build scripts
 build_script:
   - cd build
